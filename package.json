@@ -1,0 +1,26 @@
+{
+  "name": "mikaela",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "npm run css-build && nodemon",
+    "css-build": "node-sass --omit-source-map-url sass/styles.scss public/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bulma": "^0.9.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

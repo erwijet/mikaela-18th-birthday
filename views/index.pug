@@ -1,0 +1,20 @@
+extends layout
+include hide-scrollbar
+
+block body
+    section.hero.is-fullheight.is-bold.is-info
+        .hero-body
+            .container
+                h1.title Mikalea Messaging Dashboard
+                h2.subtitle
+                    .tag.is-medium#currentMsg(style='margin: 0.75% auto')
+        form#mainForm
+            .field.has-addons(style='margin: 2%')
+                .control.is-expanded
+                    input.input.is-large.is-rounded#inputMsg(type='text', placeholder='say something!')
+                .control
+                    button(type='submit').button.is-danger.is-large.is-rounded
+                        span.icon
+                            i.fas.fa-heart
+                        span Send
+    script(src='/js/index.js')
