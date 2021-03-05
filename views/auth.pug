@@ -9,10 +9,10 @@ block body
                 .box(style='margin: 0% 25%')
                     .field.has-addons
                         .control.is-expanded
-                            form
-                                input.input.is-info.is-fullwidth(name='guess', type='text', placeholder='Auth Key')
+                            form#mainForm
+                                input.input.is-info.is-fullwidth(name='guess', type='password', placeholder='Auth Key')
                         .control
-                            .button.is-info
+                            div(onclick='$("#mainForm").submit();').button.is-info
                                 span.icon   
                                     i.fas.fa-unlock
                                 span Unlock

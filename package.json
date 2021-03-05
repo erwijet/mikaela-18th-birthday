@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "start": "npm run css-build && nodemon",
+    "start": "node index.mjs",
     "css-build": "node-sass --omit-source-map-url sass/styles.scss public/css/styles.css"
   },
   "keywords": [],
