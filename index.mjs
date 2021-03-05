@@ -1,9 +1,8 @@
-import express from 'express';
-import morgan from 'morgan';
-import dotenv from 'dotenv';
-
-import cookieParser from 'cookie-parser';
-import bodyParser from 'body-parser';
+const express = require('express');
+const morgan = require('morgan');
+const dotenv = require('dotenv');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
 dotenv.config(); // enable .env
 

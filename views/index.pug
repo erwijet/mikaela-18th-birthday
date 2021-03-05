@@ -2,19 +2,38 @@ extends layout
 include hide-scrollbar
 
 block body
-    section.hero.is-fullheight.is-bold.is-info
-        .hero-body
-            .container
-                h1.title Mikalea Messaging Dashboard
-                h2.subtitle
-                    .tag.is-medium#currentMsg(style='margin: 0.75% auto')
-        form#mainForm
-            .field.has-addons(style='margin: 2%')
-                .control.is-expanded
-                    input.input.is-large.is-rounded#inputMsg(type='text', placeholder='say something!')
-                .control
-                    button(type='submit').button.is-danger.is-large.is-rounded
-                        span.icon
-                            i.fas.fa-heart
-                        span Send
-    script(src='/js/index.js')
+  section.hero.is-fullheight.is-bold.is-info
+      .hero-body
+          .container
+              h1.title
+                .level
+                  .level-right
+                    .level-item
+                      span Mikaela Messaging Dashboard
+                  .level-left(style='margin-top: 0.65%')
+                    .level-item
+                      .tags.has-addons(style='margin: 0.75% auto')
+                        span.tag.is-medium.is-dark Current Message
+                        span.tag.is-medium#currentMsg
+                    .level-item
+                      .tags.has-addons(style='margin: 0.75% auto')
+                        span.tag.is-medium.is-dark Device Status
+                        span.tag.is-medium#statusTag
+                          span.icon#statusIcon-online
+                            i.fas.fa-signal
+                          span.icon#statusIcon-offline
+                            i.fas.fa-exclamation-triangle
+                          span#statusMsg
+              h2.subtitle.buttons
+                a(href='https://youtu.be/16g9ySF5fRM').button.is-light.is-outlined Watch Build Video
+                a(href='/logout').button.is-light.is-outlined Logout
+      form#mainForm
+          .field.has-addons(style='margin: 2%')
+              .control.is-expanded
+                  input.input.is-large.is-rounded#inputMsg(type='text', placeholder='Send a message!')
+              .control
+                  button(type='submit').button.is-danger.is-large.is-rounded
+                      span.icon
+                          i.fas.fa-heart
+                      span Send
+  script(src='/js/index.js')

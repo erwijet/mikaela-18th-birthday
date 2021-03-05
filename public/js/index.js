@@ -19,13 +19,31 @@ let token;
         },
         success: data => {
             const { value } = data.d[1];
-            $('#currentMsg').html("Current Message: " + value);
+            $('#currentMsg').html(value);
         },
         error: data => {
             // TODO: Remove 
             console.log(data);
         }
-    })
+    });
+  
+  // get device status
+  
+  await $.ajax({
+    method: 'GET',
+    url: 'https://api.balena-cloud.com/v5/device',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + token
+    },
+    success: data => {
+      const online = data.d[0].is_online;
+      
+      $('#statusTag').addClass(online ? 'is-success' : 'is-warning');
+      $('#statusIcon-' + (online ? 'offline' : 'online')).attr('style', 'display: none');
+      $('#statusMsg').html(online ? 'Online' : 'Offline');
+    }
+  })
 })();
 
 // override form functionality
