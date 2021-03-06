@@ -8,4 +8,4 @@ RUN npm install
 
 RUN npm i -g pm2
 
-CMD [ "pm2", "index.js" ]
+CMD [ "pm2", "start", "index.js" ]
