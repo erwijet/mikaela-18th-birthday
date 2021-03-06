@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 
+require("dotenv");
+
 dotenv.config(); // enable .env
 
 express()
